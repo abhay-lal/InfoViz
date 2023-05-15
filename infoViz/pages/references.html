@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>18CSE301J INFO VIZ</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../vendors/simplebar/simplebar.min.js"></script>
+    <script src="../assets/js/config.js"></script>
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="../vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="../assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+    <link href="../assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+    <link href="../assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+    <link href="../assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+      var phoenixIsRTL = window.config.config.phoenixIsRTL;
+      if (phoenixIsRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="container-fluid px-0">
+        <nav class="navbar navbar-vertical navbar-expand-lg">
+          <script>
+            var navbarStyle = window.config.config.phoenixNavbarStyle;
+            if (navbarStyle && navbarStyle !== 'transparent') {
+              document.querySelector('body').classList.add(`navbar-${navbarStyle}`);
+            }
+          </script>
+          <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+            <!-- scrollbar removed-->
+            <div class="navbar-vertical-content">
+              <ul class="navbar-nav flex-column" id="navbarVerticalNav">
+                <li class="nav-item">
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="/infoViz/index.html" role="button" data-bs-toggle="" aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <div class="dropdown-indicator-icon"></div><span class="nav-link-icon"><span data-feather="pie-chart"></span></span><span class="nav-link-text">Home</span>
+                      </div>
+                    </a>
+                    <div class="parent-wrapper label-1">
+                      <ul class="nav collapse parent show" data-bs-parent="#navbarVerticalCollapse" id="home">
+                        <li class="collapsed-nav-item-title d-none">Home
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <!-- label-->
+                  <p class="navbar-vertical-label">About
+                  </p>
+                  <hr class="navbar-vertical-line" />
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link label-1" href="../pages/missionStatement.html" role="button" data-bs-toggle="" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="clipboard"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Mission Statement</span></span>
+                    </div>
+                    </a>
+                  </div>
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link label-1" href="../pages/members.html" role="button" data-bs-toggle="" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="users"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Members</span></span>
+                    </div>
+                  </a>
+                </div>
+                </li>
+                <li class="nav-item">
+                  <!-- label-->
+                  <p class="navbar-vertical-label">Dashboards
+                  </p>
+                  <hr class="navbar-vertical-line" />
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#Incidence" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="Incidence">
+                    <div class="d-flex align-items-center">
+                      <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div><span class="nav-link-icon"><span data-feather="grid"></span></span><span class="nav-link-text">Asset Bubble</span>
+                    </div>
+                  </a>
+                  <div class="parent-wrapper label-1">
+                    <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="Incidence">
+                      <li class="collapsed-nav-item-title d-none">Asset Bubble
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="../pages/assetBubble/assets.html" data-bs-toggle="" aria-expanded="false">
+                          <div class="d-flex align-items-center"><span class="nav-link-text">Asset Bubble</span>
+                          </div>
+                        </a>
+                        <!-- more inner pages-->
+                      </li>
+            
+                    </ul>
+                  </div>
+                </div>
+                <!-- parent pages-->
+                <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#Mortality" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="ECharts">
+                    <div class="d-flex align-items-center">
+                      <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div><span class="nav-link-icon"><span data-feather="bar-chart-2"></span></span><span class="nav-link-text">Cyber Crime</span>
+                    </div>
+                  </a>
+                  <div class="parent-wrapper label-1">
+                    <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="Mortality">
+                      <li class="collapsed-nav-item-title d-none">Cyber Crime
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="../pages/cyberCrime/cyberCrime.html" data-bs-toggle="" aria-expanded="false">
+                          <div class="d-flex align-items-center"><span class="nav-link-text">Cyber Crime</span>
+                          </div>
+                        </a>
+                        <!-- more inner pages-->
+                      </li>
+                  
+                    </ul>
+                  </div>
+                </div>
+                <li class="nav-item">
+                  <!-- label-->
+                  <p class="navbar-vertical-label">Documentation
+                  </p>
+                  <hr class="navbar-vertical-line" />
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link label-1" href="../pages/references.html" role="button" data-bs-toggle="" aria-expanded="false">
+                      <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="life-buoy"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">References</span></span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- parent pages-->
+                  <div class="nav-item-wrapper"><a class="nav-link label-1" href="../pages/resources.html" role="button" data-bs-toggle="" aria-expanded="false">
+                      <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="monitor"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Resources</span></span>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          
+          <div class="navbar-vertical-footer">
+            <button class="btn navbar-vertical-toggle border-0 fw-semi-bold w-100 white-space-nowrap d-flex align-items-center"><span class="uil uil-left-arrow-to-left fs-0"></span><span class="uil uil-arrow-from-right fs-0"></span><span class="navbar-vertical-footer-text ms-2">Collapse View</span></button>
+          </div>
+        </nav>
+        <nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault">
+          <div class="collapse navbar-collapse justify-content-between">
+            <div class="navbar-logo">
+
+              <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+              <a class="navbar-brand me-1 me-sm-3" href="./infoViz/index.html">
+                <div class="d-flex align-items-center">
+                  <div class="d-flex align-items-center"><img src="https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/01/srm-logo-white.svg.gzip" alt="phoenix" width="120" />
+                    <p class="logo-text ms-2 d-none d-sm-block">18CSE301J INFO VIZ</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <ul class="navbar-nav navbar-nav-icons flex-row">
+              <li class="nav-item">
+                <div class="theme-control-toggle fa-icon-wait px-2">
+                  <input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" />
+                  <label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label>
+                  <label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="content">
+          <h2 class="mb-2 lh-sm">References</h2>
+          <div class="card shadow-none border border-300 my-4" data-component-card="data-component-card">
+            <div class="card-header p-4 border-bottom border-300 bg-soft">
+              <div class="row g-3 justify-content-between align-items-center">
+                <div class="col-12 col-md">
+                  <h4 class="text-900 mb-0" data-anchor="data-anchor">Data Statement</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="p-4 code-to-copy">
+                <p>Data Statement:
+                  <p>
+                  The data used in this analysis was acquired from various open source links on the internet, with a significant portion retrieved from Yahoo Finance. The data includes multiple features that capture different aspects of the stock market and economic indicators.
+                  
+                  The primary feature extracted from the data is the time stamp, which represents the specific time at which each price point or economic data point was recorded. This enables the analysis of trends and patterns over different timeframes.
+                  
+                  In addition to the time stamp, several economic indicators were included in the dataset. 
+                  </p>
+                  These indicators include:
+                  
+                  <li>Unemployment data: The dataset incorporates information from the Employment Situation report, which is typically released on the third Friday after the conclusion of the reference week. This report provides insights into the unemployment rate, offering a measure of economic health and labor market conditions.
+                  </li>
+                  <li>Consumer Price Index (CPI): The dataset includes CPI data, which represents the cost of a fixed basket of goods and services. The CPI is calculated based on 299 items and is released monthly. It provides an indication of inflationary trends and changes in purchasing power.
+                  </li>
+                  <li>P/E Ratio (Price-to-Earnings Ratio): The dataset incorporates the P/E ratio, which is commonly used to value companies and assess their relative overvaluation or undervaluation. The P/E ratio compares a company's stock price to its earnings per share (EPS) and helps investors gauge the market's expectations for future earnings growth.
+                  </li>
+                <li>Opening, High, Low, and Closing Prices: The dataset includes the opening, high, low, and closing prices for the S&P 500 index or other relevant indices. These price points provide information about the trading range and the overall performance of the market within a given time frame.
+                </li>
+              <li> Industrial Production Index (IPI): The dataset includes the IPI, which measures the levels of production and capacity in the manufacturing, mining, electric, and gas industries relative to a base year. The IPI offers insights into industrial activity and is typically published by the Federal Reserve Board on a monthly basis.
+                </li>
+              <li>   Treasury Yield: The dataset incorporates the market yield on U.S. Treasury Securities at a 10-year constant maturity. This yield is quoted on an investment basis and is updated on the 11th business day of each month. It provides an indication of the prevailing interest rates and market sentiment towards government debt.
+                </li>
+                <br>
+                 <p> References:</p>
+                  <p>
+                  The data utilized in this analysis was primarily sourced from Yahoo Finance, which provides a wide range of financial and economic data. Yahoo Finance offers access to historical stock prices, economic indicators, and other financial information that are relevant to understanding market behavior.
+                  
+                  Additionally, open-source links from the internet were explored to gather supplementary data. These sources could include reputable financial websites, government publications, economic data providers, and other reliable sources of market and economic information.
+                  
+                  It's important to note that the specific references for the individual data points used in this analysis may vary based on the particular sources and datasets accessed. Care was taken to utilize reputable and reliable sources to ensure the accuracy and integrity of the data.</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+            <div class="toast align-items-center text-white bg-dark border-0 light" id="icon-copied-toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body p-3"></div>
+                <button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+          <footer class="footer position-absolute">
+            <div class="row g-0 justify-content-between align-items-center h-100">
+              <div class="col-12 col-sm-auto text-center">
+                <p class="mb-0 mt-2 mt-sm-0 text-900">Copyright © Spring 2023</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script>
+        var navbarTopStyle = window.config.config.phoenixNavbarTopStyle;
+        var navbarTop = document.querySelector('.navbar-top');
+        if (navbarTopStyle === 'darker') {
+          navbarTop.classList.add('navbar-darker');
+        }
+
+        var navbarVerticalStyle = window.config.config.phoenixNavbarVerticalStyle;
+        var navbarVertical = document.querySelector('.navbar-vertical');
+        if (navbarVertical && navbarVerticalStyle === 'darker') {
+          navbarVertical.classList.add('navbar-darker');
+        }
+      </script>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+    <div class="offcanvas offcanvas-end settings-panel border-0" id="settings-offcanvas" tabindex="-1" aria-labelledby="settings-offcanvas">
+      <div class="offcanvas-header align-items-start border-bottom flex-column">
+        <div class="pt-1 w-100 mb-6 d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-2 me-2 lh-sm"><span class="fas fa-palette me-2 fs-0"></span>Theme Customizer</h5>
+            <p class="mb-0 fs--1">Explore different styles according to your preferences</p>
+          </div>
+          <button class="btn p-1 fw-bolder" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><span class="fas fa-times fs-0"> </span></button>
+        </div>
+        <button class="btn btn-phoenix-secondary w-100" data-theme-control="reset"><span class="fas fa-arrows-rotate me-2 fs--2"></span>Reset to default</button>
+      </div>
+      <div class="offcanvas-body scrollbar px-card" id="themeController">
+        <div class="setting-panel-item mt-0">
+          <h5 class="setting-panel-item-title">Color Scheme</h5>
+          <div class="row gx-2">
+            <div class="col-6">
+              <input class="btn-check" id="themeSwitcherLight" name="theme-color" type="radio" value="light" data-theme-control="phoenixTheme" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherLight"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/default-light.png" alt=""/></span><span class="label-text">Light</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="themeSwitcherDark" name="theme-color" type="radio" value="dark" data-theme-control="phoenixTheme" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0" src="../assets/img/generic/default-dark.png" alt=""/></span><span class="label-text"> Dark</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-3 p-4 setting-panel-item bg-white">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="setting-panel-item-title mb-1">RTL </h5>
+            <div class="form-check form-switch mb-0">
+              <input class="form-check-input ms-auto" type="checkbox" data-theme-control="phoenixIsRTL" />
+            </div>
+          </div>
+          <p class="mb-0 text-700">Change text direction</p>
+        </div>
+        <div class="border rounded-3 p-4 setting-panel-item bg-white">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="setting-panel-item-title mb-1">Support Chat </h5>
+            <div class="form-check form-switch mb-0">
+              <input class="form-check-input ms-auto" type="checkbox" data-theme-control="phoenixSupportChat" />
+            </div>
+          </div>
+          <p class="mb-0 text-700">Toggle support chat</p>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Navigation Type</h5>
+          <div class="row gx-2">
+            <div class="col-6">
+              <input class="btn-check" id="navbarPositionVertical" name="navigation-type" type="radio" value="vertical" data-theme-control="phoenixNavbarPosition" data-page-url="../documentation/layouts/vertical-navbar.html" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionVertical"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../assets/img/generic/default-light.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../assets/img/generic/default-dark.png" alt=""/></span><span class="label-text">Vertical</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="navbarPositionHorizontal" name="navigation-type" type="radio" value="horizontal" data-theme-control="phoenixNavbarPosition" data-page-url="../documentation/layouts/horizontal-navbar.html" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionHorizontal"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../assets/img/generic/top-default-dark.png" alt=""/></span><span class="label-text"> Horizontal</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="navbarPositionCombo" name="navigation-type" type="radio" value="combo" data-theme-control="phoenixNavbarPosition" data-page-url="../documentation/layouts/combo-navbar.html" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionCombo"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none" src="../assets/img/generic/nav-combo-light.png" alt=""/><img class="img-fluid img-prototype d-light-none" src="../assets/img/generic/nav-combo-dark.png" alt=""/></span><span class="label-text"> Combo</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Vertical Navbar Appearance</h5>
+          <div class="row gx-2">
+            <div class="col-6">
+              <input class="btn-check" id="navbar-style-default" type="radio" name="config.name" value="default" data-theme-control="phoenixNavbarVerticalStyle" />
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default"> <img class="img-fluid img-prototype d-dark-none" src="../assets/img/generic/default-light.png" alt="" /><img class="img-fluid img-prototype d-light-none" src="../assets/img/generic/default-dark.png" alt="" /><span class="label-text d-dark-none"> Default</span><span class="label-text d-light-none">Default</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="navbar-style-dark" type="radio" name="config.name" value="darker" data-theme-control="phoenixNavbarVerticalStyle" />
+              <label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-dark"> <img class="img-fluid img-prototype d-dark-none" src="../assets/img/generic/vertical-darker.png" alt="" /><img class="img-fluid img-prototype d-light-none" src="../assets/img/generic/vertical-lighter.png" alt="" /><span class="label-text d-dark-none"> Darker</span><span class="label-text d-light-none">Lighter</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Horizontal Navbar Shape</h5>
+          <div class="row gx-2">
+            <div class="col-6">
+              <input class="btn-check" id="navbarShapeDefault" name="navbar-shape" type="radio" value="default" data-theme-control="phoenixNavbarTopShape" data-page-url="../documentation/layouts/horizontal-navbar.html" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../assets/img/generic/top-default-dark.png" alt=""/></span><span class="label-text">Default</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="navbarShapeSlim" name="navbar-shape" type="radio" value="slim" data-theme-control="phoenixNavbarTopShape" data-page-url="../documentation/layouts/vertical-navbar.html#horizontal-navbar-slim" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeSlim"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../assets/img/generic/top-slim.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../assets/img/generic/top-slim-dark.png" alt=""/></span><span class="label-text"> Slim</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="setting-panel-item">
+          <h5 class="setting-panel-item-title">Horizontal Navbar Appearance</h5>
+          <div class="row gx-2">
+            <div class="col-6">
+              <input class="btn-check" id="navbarTopDefault" name="navbar-top-style" type="radio" value="default" data-theme-control="phoenixNavbarTopStyle" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDefault"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../assets/img/generic/top-default.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../assets/img/generic/top-style-darker.png" alt=""/></span><span class="label-text">Default</span></label>
+            </div>
+            <div class="col-6">
+              <input class="btn-check" id="navbarTopDarker" name="navbar-top-style" type="radio" value="darker" data-theme-control="phoenixNavbarTopStyle" />
+              <label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker"> <span class="mb-2 rounded d-block"><img class="img-fluid img-prototype d-dark-none mb-0" src="../assets/img/generic/navbar-top-style-light.png" alt=""/><img class="img-fluid img-prototype d-light-none mb-0" src="../assets/img/generic/top-style-lighter.png" alt=""/></span><span class="label-text d-dark-none">Darker</span><span class="label-text d-light-none">Lighter</span></label>
+            </div>
+          </div>
+        </div><a class="bun btn-primary d-grid mb-3 text-white dark__text-100 mt-5 btn btn-primary" href="https://themes.getbootstrap.com/product/phoenix-admin-dashboard-webapp-template/" target="_blank">Purchase template</a>
+      </div>
+    </div><a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">
+    </a>
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/anchorjs/anchor.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../vendors/list.js/list.min.js"></script>
+    <script src="../vendors/feather-icons/feather.min.js"></script>
+    <script src="../vendors/dayjs/dayjs.min.js"></script>
+    <script src="../assets/js/phoenix.js"></script>
+
+  </body>
+
+</html>
