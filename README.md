@@ -1,4 +1,4 @@
-# [Info-Viz](http://abhaylal.tech/InfoViz-Final/)
+# [Info-Viz](http://abhaylal.tech/InfoViz/)
 # EDA_Asset_Bubble
 ## ABOUT 
 The data contains a time series of data points, with each point representing a specific date or time period. For example, the time series for the consumer price index would show the CPI for each month over a period of time. The dataset would also include other variables, such as unemployment rates, industrial production levels, and stock prices, depending on the specific economic indicators being analyzed.
@@ -7,7 +7,7 @@ The data sources are reliable and accurate, and the visualizations are created u
 ## LINKS
 TABLEU DASHBOARD : [Link](https://public.tableau.com/app/profile/abhay.lal/viz/Asset-Bubble-Viz/Dashboard1?publish=yes)</br>
 DATA SOURCE : [Link](https://www.kaggle.com/datasets/abhaylal1/market-crash-s-and-p-500)<br>
-WEBSITE LINK : [Link](http://abhaylal.tech/InfoViz-Final/)
+WEBSITE LINK : [Link](http://abhaylal.tech/InfoViz/)
 ## VIDEO
 https://user-images.githubusercontent.com/74143500/232194799-0acda87e-1fae-4f1c-9252-617f38ee8c7d.mp4
 ## Contributors
